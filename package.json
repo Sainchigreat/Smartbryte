@@ -1,0 +1,28 @@
+{
+  "name": "smartbryte-homepage",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "qa:content": "node scripts/qa-content.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.5",
+    "@fontsource/instrument-serif": "^5.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.6",
+    "@vitejs/plugin-react": "^4.4.1",
+    "esbuild": "^0.25.12",
+    "tailwindcss": "^4.1.7",
+    "typescript": "~5.7.3",
+    "vite": "^6.3.5"
+  }
+}
