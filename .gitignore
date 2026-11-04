@@ -24,6 +24,3 @@ docs/design-references/brief.txt
 
 # Scratch
 *.tsbuildinfo
-
-# Standalone preview build (regenerable via npm run preview:file)
-SmartBryte-Homepage-Preview.html
