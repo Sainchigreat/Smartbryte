@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FAQS } from "../lib/content";
-import { Container, SectionTag } from "./ui";
+import { Container } from "./ui";
 import { Plus, Starburst } from "./shapes";
 
 export default function Faqs() {
@@ -10,16 +10,13 @@ export default function Faqs() {
     <section id="faqs" className="relative overflow-hidden bg-wash py-20 md:py-28">
       <Container className="relative grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
         <div className="self-start lg:sticky lg:top-28">
-          <SectionTag number="06" label={FAQS.label} />
-          <h2 className="heading mt-5 text-[clamp(1.9rem,3.6vw,2.9rem)] text-ink">
+          <h2 className="heading text-[clamp(1.9rem,3.6vw,2.9rem)] text-ink">
             Got questions? We have{" "}
             <span className="font-serif font-normal italic tracking-[-0.01em] text-violet">
               answers.
             </span>
           </h2>
-          <Starburst
-            className="mt-8 hidden h-20 w-20 rotate-12 text-sun lg:block"
-          />
+          <Starburst className="mt-8 hidden h-20 w-20 rotate-12 text-sun lg:block" />
         </div>
 
         <div className="space-y-3.5">

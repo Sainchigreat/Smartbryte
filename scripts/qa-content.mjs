@@ -85,12 +85,12 @@ C.WHY.modules.forEach((m) => {
 
 push(C.PROGRAMMES.headline);
 push(C.PROGRAMMES.introduction);
+push(C.PROGRAMMES.learnLabel);
 C.PROGRAMMES.items.forEach((p) => {
   push(p.name);
   push(p.ageRange);
   push(p.headline);
   push(p.description);
-  push(p.learnLabel);
   p.learn.forEach(push);
   push(p.cta);
 });

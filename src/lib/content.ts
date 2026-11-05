@@ -3,9 +3,8 @@
  *
  * Every visible string below is reproduced VERBATIM from the approved
  * SmartBryte Lovable Homepage Build Brief (PDF §7). Do not paraphrase,
- * shorten, expand, correct or invent wording. Structural labels (nav,
- * section wayfinding) are the only additions and map 1:1 to supplied
- * sections, as permitted by the brief.
+ * shorten, expand, correct or invent wording. Nav labels are the only
+ * additions and map 1:1 to supplied sections, as permitted by the brief.
  */
 
 export const NAV = [
@@ -28,7 +27,6 @@ export const HERO = {
 };
 
 export const INTRO = {
-  label: "Introduction to SmartBryte",
   headline: "Education should prepare children for more than examinations.",
   paragraphs: [
     "The world is changing, and the knowledge and skills that young people need to succeed are changing with it. Gone are the days when good grades alone were enough to make a young person ready for the world of work. Today, especially in the age of AI, children need to know how to use technology, think through problems, develop ideas and turn what they know into something the world values.",
@@ -38,7 +36,6 @@ export const INTRO = {
 };
 
 export const WHY = {
-  label: "Why SmartBryte",
   headline: "An education that gives your child more.",
   introduction:
     "Choosing the right learning opportunities for your child matters. Beyond what they learn in school, they need opportunities to explore their interests, understand technology and develop skills they can put to use.",
@@ -75,14 +72,12 @@ export type Programme = {
   ageRange: string;
   headline: string;
   description: string;
-  learnLabel: string;
   learn: string[];
   cta: string;
   tone: "sage" | "lavender" | "rose";
 };
 
 export const PROGRAMMES = {
-  label: "Our Programmes",
   headline: "The right learning experience for every stage of growth.",
   introduction:
     "Children don't all learn the same way, and a seven-year-old shouldn't have the same learning experience as a seventeen-year-old. That's why we've structured our programmes around three age groups, with learning experiences suited to the needs and abilities of each stage.",
@@ -95,7 +90,6 @@ export const PROGRAMMES = {
       headline: "Building strong foundations for a brighter future.",
       description:
         "These are the years when children are curious, eager to explore and discovering what they are capable of. Our Junior Learners programme gives them the opportunity to build strong academic foundations while getting introduced to technology and digital skills in ways they can understand and enjoy.",
-      learnLabel: "What they'll learn:",
       learn: [
         "Science, Technology, English and Mathematics.",
         "Introduction to computers and digital literacy.",
@@ -113,7 +107,6 @@ export const PROGRAMMES = {
       headline: "Helping teenagers turn their interests into useful skills.",
       description:
         "Teenage years are an important time to discover interests, develop abilities and start exploring future possibilities. Our programme helps teenagers strengthen their academic knowledge while learning practical digital skills they can use to build projects, express their creativity and explore potential career paths.",
-      learnLabel: "What they'll learn:",
       learn: [
         "Science, Technology, English and Mathematics.",
         "Website development and coding.",
@@ -132,7 +125,6 @@ export const PROGRAMMES = {
       headline: "Developing skills that open doors to opportunities.",
       description:
         "At this stage, learning should begin to connect more directly with the opportunities young adults want to pursue. Whether your child is interested in technology, entrepreneurship, freelancing or building a career, our programme provides opportunities to develop practical skills and gain experience through real projects.",
-      learnLabel: "What they'll learn:",
       learn: [
         "Advanced digital skills and technology.",
         "Website and mobile application development.",
@@ -148,7 +140,6 @@ export const PROGRAMMES = {
 };
 
 export const GAINS = {
-  label: "What Your Child Gains",
   headline:
     "We want your child to leave with more than just what they learn in class.",
   introduction:
@@ -178,7 +169,6 @@ export const GAINS = {
 };
 
 export const TESTIMONIALS = {
-  label: "Testimonials",
   headline:
     "Hear from parents who have experienced the SmartBryte difference.",
   // The only permitted testimonial-section content until genuine
@@ -187,7 +177,6 @@ export const TESTIMONIALS = {
 };
 
 export const FAQS = {
-  label: "FAQs",
   headline: "Got questions? We have answers.",
   items: [
     {

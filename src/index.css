@@ -25,7 +25,6 @@
   /* Single SmartBryte action colour (not inherited from either ref) */
   --color-violet: #5b3df0;
   --color-violet-deep: #4a2fd6;
-  --color-violet-night: #37219c;
 
   /* Huddle-style muted pastel programme categories */
   --color-sage: #d5e3d0; /* Junior Learners */
@@ -94,17 +93,6 @@
 }
 
 @layer components {
-  /* SuperHi-style hard "sticker" offset — used on CTAs only, never cards */
-  .sticker {
-    box-shadow: 0 3px 0 0 var(--color-ink);
-  }
-  .sticker-violet {
-    box-shadow: 0 3px 0 0 var(--color-violet-night);
-  }
-  .sticker-sun {
-    box-shadow: 0 3px 0 0 rgba(35, 32, 58, 0.9);
-  }
-
   /* Editorial display type: confident, medium weight, tightening tracking */
   .display {
     font-weight: 560;
@@ -115,13 +103,5 @@
     font-weight: 560;
     letter-spacing: -0.022em;
     line-height: 1.12;
-  }
-
-  /* Huddle-style uppercase wayfinding micro-label */
-  .micro-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
   }
 }

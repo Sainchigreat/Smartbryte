@@ -8,7 +8,7 @@ export function Wordmark({ dark = false }: { dark?: boolean }) {
     <a
       href="#home"
       className="inline-flex items-center gap-2.5"
-      aria-label="SmartBryte — back to top"
+      aria-label="SmartBryte"
     >
       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-violet">
         <Sparkle className="h-5 w-5 text-sun" />
