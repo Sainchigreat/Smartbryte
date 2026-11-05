@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* SmartBryte design tokens                                            */
+/* A deliberate synthesis: Huddle's editorial restraint (warm paper,   */
+/* hairline borders, muted pastel category cards, generous rhythm)     */
+/* + SuperHi / WonderKids playful energy (flat geometric cut-outs,     */
+/* one confident violet action colour, pill CTAs, serif accent words). */
+/* ------------------------------------------------------------------ */
+@theme {
+  /* Surfaces */
+  --color-paper: #faf7f1; /* warm white canvas */
+  --color-paper-soft: #f2ede2; /* deeper warm tint */
+  --color-card: #ffffff;
+  --color-wash: #ebf1f8; /* pale blue supporting surface */
+  --color-wash-deep: #dde8f4;
+
+  /* Ink + hairlines */
+  --color-ink: #23203a;
+  --color-ink-soft: #524e68;
+  --color-ink-faint: #7d7993;
+  --color-line: #e5e0d3;
+  --color-line-blue: #d6e1ee;
+
+  /* Single SmartBryte action colour (not inherited from either ref) */
+  --color-violet: #5b3df0;
+  --color-violet-deep: #4a2fd6;
+  --color-violet-night: #37219c;
+
+  /* Huddle-style muted pastel programme categories */
+  --color-sage: #d5e3d0; /* Junior Learners */
+  --color-sage-deep: #3e6b4f;
+  --color-lavender: #dcd3f0; /* Teen Learners */
+  --color-lavender-deep: #4a3aa8;
+  --color-rose: #f0d9d3; /* Young Adults */
+  --color-rose-deep: #96483d;
+
+  /* SuperHi / WonderKids decorative accents (fills only) */
+  --color-sun: #f7c948;
+  --color-sun-deep: #e5ae2b;
+  --color-sky: #9ccbeb;
+
+  /* Type */
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+
+  /* One friendly radius family */
+  --radius-card: 1.5rem; /* 24px cards */
+  --radius-img: 1.25rem; /* 20px photo crops */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-size: 17px;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-sun);
+    color: var(--color-ink);
+  }
+
+  /* Sticky-header offset for in-page navigation */
+  section[id],
+  div[id="apply"] {
+    scroll-margin-top: 96px;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-violet);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* SuperHi-style hard "sticker" offset — used on CTAs only, never cards */
+  .sticker {
+    box-shadow: 0 3px 0 0 var(--color-ink);
+  }
+  .sticker-violet {
+    box-shadow: 0 3px 0 0 var(--color-violet-night);
+  }
+  .sticker-sun {
+    box-shadow: 0 3px 0 0 rgba(35, 32, 58, 0.9);
+  }
+
+  /* Editorial display type: confident, medium weight, tightening tracking */
+  .display {
+    font-weight: 560;
+    letter-spacing: -0.03em;
+    line-height: 1.04;
+  }
+  .heading {
+    font-weight: 560;
+    letter-spacing: -0.022em;
+    line-height: 1.12;
+  }
+
+  /* Huddle-style uppercase wayfinding micro-label */
+  .micro-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+}

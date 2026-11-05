@@ -1,0 +1,26 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Third-party visual reference images + scratch (design guidance only — not for redistribution)
+docs/design-references/*.jpeg
+docs/design-references/*.png
+docs/design-references/brief.txt
+
+# Scratch
+*.tsbuildinfo
