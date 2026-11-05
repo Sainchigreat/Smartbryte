@@ -1,5 +1,5 @@
 import { INTRO, IMAGE_ALT } from "../lib/content";
-import { Container, SectionTag } from "./ui";
+import { Container } from "./ui";
 import { Blob, Ring, Sparkle } from "./shapes";
 
 export default function Introduction() {
@@ -7,8 +7,7 @@ export default function Introduction() {
     <section id="introduction" className="relative overflow-hidden py-20 md:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <SectionTag number="01" label={INTRO.label} />
-          <h2 className="heading mt-5 text-[clamp(1.9rem,3.6vw,2.9rem)] text-ink">
+          <h2 className="heading text-[clamp(1.9rem,3.6vw,2.9rem)] text-ink">
             Education should prepare children for more than{" "}
             <span className="font-serif font-normal italic tracking-[-0.01em] text-violet">
               examinations.

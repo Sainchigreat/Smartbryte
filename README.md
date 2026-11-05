@@ -38,9 +38,9 @@ any one. Here is how each contributes and how the conflicts were resolved:
 
 | Reference | What it contributes |
 |---|---|
-| **SuperHi** (MD) | A disciplined *decorative shape system*: flat geometric cut-outs (starburst, semicircle, ring, squiggle, dot-grid, triangle) placed behind content; one confident action colour; hard "sticker" offset shadows on CTAs; pill controls with a directional arrow. |
+| **SuperHi** (MD) | A disciplined *decorative shape system*: flat geometric cut-outs (starburst, semicircle, ring, squiggle, dot-grid, triangle) placed behind content; one confident action colour; flat pill controls with a directional arrow. |
 | **WonderKids** (image) | Playful learning energy: an italic-serif accent word inside a clean sans headline, circular-arrow pill CTAs, and a rich purple closing band. |
-| **Huddle** (MD) | Editorial restraint: warm light canvas, generous rhythm, strong type hierarchy at regular/medium weights, 1px hairline borders (no blurred shadows), uppercase numbered micro-labels, and **colour-as-category** pastel cards. |
+| **Huddle** (MD) | Editorial restraint: warm light canvas, generous rhythm, strong type hierarchy at regular/medium weights, 1px hairline borders (no shadows), and **colour-as-category** pastel cards. |
 | **TriVision** (image) | Page *architecture*: oversized hero → horizontal photo strip → split image-and-copy intro → distinct programme/benefit presentation → restrained testimonial area → strong dark footer. (Its green/lime identity, stats and text are **not** borrowed.) |
 
 **Deliberate conflict resolutions**
@@ -49,8 +49,8 @@ any one. Here is how each contributes and how the conflicts were resolved:
   (`#ebf1f8`) for alternating section rhythm — neither reference's exact canvas.
 - **Action colour:** a SmartBryte-specific violet (`#5b3df0`) owns every filled
   action — not SuperHi's electric iris, not Huddle's black/amber.
-- **Elevation:** cards stay flat with hairline borders (Huddle); only CTA pills
-  get a subtle hard offset shadow (SuperHi). No blurred shadows anywhere.
+- **Elevation:** everything is flat — hairline borders and background contrast
+  only. No shadows anywhere (blurred or offset).
 - **Type:** Manrope carries ~95% of the system; Instrument Serif italic appears
   only as the accent word. Two families, never more.
 - **Programme cards:** Huddle's muted pastels are assigned one-to-one to the age
@@ -73,6 +73,18 @@ sun #f7c948   sky #9ccbeb
 ```
 
 ---
+
+## Simplicity
+
+The page follows a Linear / Apple-Notes discipline: one purpose per section,
+headings that stand on their own, and no secondary chrome. There are **no**
+taglines, wayfinding micro-labels, section numbers, or helper captions — if a
+section needed a label to make sense, the layout was fixed instead. The entire
+UI kit is three primitives (`Container`, `PillLink`, `ArrowRight`); controls are
+flat with colour-only hover states. All approved copy is preserved verbatim.
+
+**Deployment:** the site deploys on **Vercel** from `main`. Merging to `main`
+publishes automatically.
 
 ## Content integrity
 
@@ -124,13 +136,13 @@ src/
   lib/content.ts            # all verbatim copy + structural labels
   components/
     shapes/index.tsx        # flat decorative shape library
-    ui.tsx                  # Container, SectionTag, PillLink, ArrowRight
+    ui.tsx                  # Container, PillLink, ArrowRight
     Header.tsx              # sticky nav + scroll-spy + mobile menu + Wordmark
     Hero.tsx                # headline, CTAs, age note, photo strip
     Introduction.tsx        # editorial split
     WhySmartBryte.tsx       # five benefit modules
     Programmes.tsx          # three pastel age-group cards
-    Gains.tsx               # numbered editorial sequence
+    Gains.tsx               # two-column benefit grid
     Testimonials.tsx        # restrained empty state (supplied note only)
     Faqs.tsx                # nine-item accessible accordion
     FinalCta.tsx            # closing enrolment band
